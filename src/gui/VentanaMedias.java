@@ -98,13 +98,13 @@ public class VentanaMedias extends JFrame {
 		contentPane.add(lblNewLabel_5, "cell 0 8");
 		
 		lblPromedio = new JLabel("");
-		contentPane.add(lblPromedio, "cell 1 8");
+		contentPane.add(lblPromedio, "cell 1 8 5 1");
 		
 		JLabel lblNewLabel_7 = new JLabel("Resultado:");
 		contentPane.add(lblNewLabel_7, "cell 0 9");
 		
 		lblResultado = new JLabel("");
-		contentPane.add(lblResultado, "cell 1 9");
+		contentPane.add(lblResultado, "cell 1 9 5 1");
 		
 		txtNota2 = new JTextField();
 		contentPane.add(txtNota2, "cell 3 4,growx");
@@ -123,8 +123,10 @@ public class VentanaMedias extends JFrame {
 			
 			if (media>=5) {
 				this.lblResultado.setText("Ha aprobado la asignatura");
+				lblResultado.setForeground(new Color(24,175,39));
 			} else {
 				this.lblResultado.setText("Toca recuperar");
+				lblResultado.setForeground(Color.RED);
 			}
 		} catch(NumberFormatException e) {
 			JOptionPane.showMessageDialog(contentPane, "Debe introducir una nota valida", 
